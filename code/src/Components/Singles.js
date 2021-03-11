@@ -1,15 +1,6 @@
 import React from 'react';
 
-const generateDelimiter = (index, length) => {
-  if (index === length - 2) {
-    return " & ";
-  } else if (index < length - 2) {
-    return ", ";
-  }
-  return;
-};
-
-export const Album = (props) => {
+export const Singles = (props) => {
     return (
         <>
             <div className="album-container">

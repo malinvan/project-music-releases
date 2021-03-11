@@ -62,16 +62,16 @@ code {
 
 .hidden {
   display: none;
+  transition-delay: 0.1s;
 }
 
-/* .albumcover:hover >
-.hidden { 
-  display: flex;
-} */
+.image-container:hover .hidden {
+  display: flex; 
+}
 
 .album-container:hover .albumcover {
   opacity: 0.7;
-  transition-delay: 0.2s;
+  transition-delay: 0.1s;
 }
 
 .icon-container { 
