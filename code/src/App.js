@@ -9,15 +9,13 @@ import { HeaderSingles } from './Components/HeaderSingles.js';
 import { Singles } from './Components/Singles.js';
 
 
+
 const dataArray = data.albums.items;
-const artistArray = dataArray.filter(artist => artist.name);
-console.log(artistArray);
+// const artistArray = dataArray.filter(artist => artist.name);
 const albumArray = dataArray.filter(album => album.album_type === 'album');
 const singleArray = dataArray.filter(single => single.album_type === 'single');
 const playlistArray = json.playlists.items;
 
-// console.log(singleArray);
-// console.log(albumArray);
 
 export const App = () => {
   return (
@@ -44,8 +42,8 @@ export const App = () => {
               artistName={single.artists[0].name}
               image={single.images[0].url}
               albumURL={single.external_urls.spotify}
-              artistURL={single.artists[0].external_urls.spotify}
-              artists={single.artists}
+              artistURL={single.artists.map((item) => item.external_urls.spotify)}
+              artists={single.artists.map((item, index) => <a>{item.name}</a>)}
             />
           ))}
         </section>

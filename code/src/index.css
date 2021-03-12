@@ -119,9 +119,8 @@ code {
 .text-container {
   text-align: center;
   width: 80%;
-  padding: 15px 30px 30px 30px;
+  /* padding: 15px 30px 30px 30px; */
 }
-
 
 .album-name {
   font-size: 14px;
@@ -133,6 +132,14 @@ code {
   font-size: 14px;
 }
 
+.artist-name:not(:last-child):not(:nth-last-child(2))::after {
+  content: ', ';
+}
+
+.artist-name:not(:first-child):last-child::before{
+  margin-right: 5px;
+  content: ' & ';
+}
 .text-container a, a:hover, a:focus, a:active {
     text-decoration: none;
     color: inherit;
@@ -177,7 +184,7 @@ code {
 
   .text-container {
     text-align: left;
-    padding: 15px 30px 30px 0px;
+    /* padding: 15px 30px 30px 0px; */
   }
 
   .pick-image {
@@ -205,7 +212,7 @@ code {
 
   .text-container {
     text-align: left;
-    padding: 15px 30px 30px 0px;
+    /* padding: 15px 30px 30px 0px; */
     height: 130px;
   }
 /* 

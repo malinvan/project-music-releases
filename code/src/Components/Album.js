@@ -1,33 +1,28 @@
 import React from 'react';
+import { Artists } from './Artists.js';
 
-const generateDelimiter = (index, length) => {
-  if (index === length - 2) {
-    return " & ";
-  } else if (index < length - 2) {
-    return ", ";
-  }
-  return;
-};
 
 export const Album = (props) => {
+    console.log(props);
     return (
         <>
             <div className="album-container">
                 <div className="image-container">
                     <img className="albumcover" src={props.image} alt="Album cover" />
                     <div className="icon-container hidden">
-                        <img className="heart-icon" src="/icons/heart.svg" />
-                        <img className="play-icon" src="/icons/play.svg" />
-                        <img className="dots-icon" src="/icons/dots.svg" />
+                        <img className="heart-icon" src="/icons/heart.svg" alt="Like-bottom"/>
+                        <img className="play-icon" src="/icons/play.svg" alt="Play"/>
+                        <img className="dots-icon" src="/icons/dots.svg" alt="Menue"/>
                     </div>
                 </div>
                 <div className="text-container">
-                    <a href={props.albumURL}>
+                    <a href={props.albumURL} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    >
                         <h2 className="album-name">{props.albumName}</h2>
                     </a>
-                    <a href={props.artistURL}>
-                        <p className="artist-name">{props.artistName}</p>
-                    </a>
+                    <Artists artistName={props.artistName} artistURL={props.artistURL}/>
                 </div>
             </div>
         </>
