@@ -147,6 +147,7 @@ code {
 .album-name {
   font-size: 14px;
   color: white;
+  display: inline;
 }
 
 .artist-name {
