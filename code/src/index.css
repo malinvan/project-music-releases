@@ -120,6 +120,30 @@ code {
   width: 80%;
 }
 
+.name-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* .name-container div:nth-last-of-type(2)::after  {
+  content: ', ';
+  margin-right: 5px;
+}
+
+.name-container div:not(:first-of-type, :last-of-type)::before {
+  margin-right: 5px;
+  content: ' & ';
+} */
+
+.name-container :not(:last-child):not(:nth-last-child(2))::after {
+  content: ', ';
+}
+
+.name-container :not(:first-child):last-child::before {
+  margin-right: 5px;
+  content: ' & ';
+}
+
 .album-name {
   font-size: 14px;
   color: white;
@@ -128,15 +152,6 @@ code {
 .artist-name {
   color: #a0a0a0;
   font-size: 14px;
-}
-
-.artist-name a:nth-last-of-type(2)::after  {
-  content: ', ';
-}
-
-.artist-name a:not(:first-of-type, :last-of-type)::before {
-  margin-right: 5px;
-  content: ' & ';
 }
 
 .text-container a, a:hover, a:focus, a:active {

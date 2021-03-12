@@ -20,12 +20,13 @@ export const Singles =
                     rel="noopener noreferrer">
                         <h2 className="album-name">{props.albumName}</h2>
                     </a>
+                    <div className="name-container">
                     {
                         props.artists.map(artist => (
                             <Artists artistName={artist.name} artistURL={artist.external_urls.spotify}/>
                         ))
                     }
-                    
+                    </div>
                 </div>
             </div>
         </>
