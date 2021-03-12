@@ -42,8 +42,7 @@ export const App = () => {
               artistName={single.artists[0].name}
               image={single.images[0].url}
               albumURL={single.external_urls.spotify}
-              artistURL={single.artists.map((item) => item.external_urls.spotify)}
-              artists={single.artists.map((item, index) => <a>{item.name}</a>)}
+              artists={single.artists}
             />
           ))}
         </section>
@@ -56,7 +55,6 @@ export const App = () => {
               artistName={album.artists[0].name}
               image={album.images[0].url}
               albumURL={album.external_urls.spotify}
-              artistURL={album.artists[0].external_urls.spotify}
               artists={album.artists}
             />
           ))}

@@ -7,6 +7,5 @@ export const Artists = (props) => {
                 <p className="artist-name">{props.artistName}</p>
             </a>
         </div>
-
     );
 };

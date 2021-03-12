@@ -1,7 +1,8 @@
 import React from 'react';
 import { Artists } from './Artists.js';
 
-export const Singles = (props) => {
+export const Singles = 
+(props) => {
     return (
         <>
             <div className="album-container">
@@ -19,7 +20,12 @@ export const Singles = (props) => {
                     rel="noopener noreferrer">
                         <h2 className="album-name">{props.albumName}</h2>
                     </a>
-                    <Artists artistName={props.artistName} artistURL={props.artistURL}/>
+                    {
+                        props.artists.map(artist => (
+                            <Artists artistName={artist.name} artistURL={artist.external_urls.spotify}/>
+                        ))
+                    }
+                    
                 </div>
             </div>
         </>
