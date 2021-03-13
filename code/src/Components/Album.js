@@ -1,7 +1,6 @@
 import React from 'react';
 import { Artists } from './Artists.js';
 
-
 export const Album = (props) => {
     console.log(props);
     return (

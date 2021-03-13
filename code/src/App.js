@@ -8,14 +8,10 @@ import { Playlistheader } from './Components/Playlistheader.js';
 import { HeaderSingles } from './Components/HeaderSingles.js';
 import { Singles } from './Components/Singles.js';
 
-
-
 const dataArray = data.albums.items;
-// const artistArray = dataArray.filter(artist => artist.name);
 const albumArray = dataArray.filter(album => album.album_type === 'album');
 const singleArray = dataArray.filter(single => single.album_type === 'single');
 const playlistArray = json.playlists.items;
-
 
 export const App = () => {
   return (
