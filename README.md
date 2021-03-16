@@ -16,4 +16,4 @@ We managed to do everything we wanted to add to the project, so there not really
 
 ## View it live
 
-https://github.com/sssylvasss/project-music-releases.git
+https://ylva-malins-amazing-music-site.netlify.app
